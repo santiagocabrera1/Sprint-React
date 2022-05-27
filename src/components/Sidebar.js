@@ -4,7 +4,7 @@ import './Sidebar.css'
 const Sidebar = ({isOpen, toggleMenu}) => {
   return ( 
     <aside className={`mainSidebar ${isOpen ? 'open' : 'close'}`} >
-        <button onClick={toggleMenu}>🐛 holis</button>
+        <button onClick={toggleMenu}>❌</button>
     </aside>
   )
 }

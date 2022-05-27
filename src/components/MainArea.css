@@ -7,8 +7,12 @@
 
 
 @media(min-width: 1025px) {
-    .mainArea {
+    .mainArea {        
         width: calc(100vw - 296px); /* calc es el ancho total de la pantalla menos el ancho del sidebar, puedo restar vw menos px :) */
+        
+    }
+    button {
+        display: none;
 
     }
 }
