@@ -1,8 +1,11 @@
 import React from 'react'
+import './Sidebar.css'
 
-export const Sidebar = () => {
-  return (
-    <div>Sidebar</div>
+const Sidebar = ({isOpen, toggleMenu}) => {
+  return ( 
+    <aside className={`mainSidebar ${isOpen ? 'open' : 'close'}`} >
+        <button onClick={toggleMenu}>🐛 holis</button>
+    </aside>
   )
 }
 
