@@ -3,12 +3,12 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 const  mainRoute = () => {
     <BrowserRouter>
-    <Route>
+    <Routes>
        <Route path="/" element={<Home/>}/>
-       <Route path="Products" element={<ProductsList/>}/>
+       <Route path="/products" element={<ProductsList/>}/>
        <Route path="/Products/:id" element={<ProductView/>}/>
        <Route path="/Productos/new" element={<Products/>}/>
-    </Route>
+    </Routes>
 
     </BrowserRouter>
 
