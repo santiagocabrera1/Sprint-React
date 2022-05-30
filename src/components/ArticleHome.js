@@ -17,4 +17,4 @@ const ArticleHome = ({titulo, cantidad, icon}) => {
     )
 }
 
-export default ArticleHome
+export default ArticleHome;
