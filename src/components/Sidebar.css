@@ -59,7 +59,7 @@
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -70,7 +70,8 @@
 
 @media (min-width: 1025px) {
   .mainSidebar {
-    position: relative;
+    position: sticky;
+    top: 0;
     left: 0;
     background-color: var(--sidebar-bg);
   }
