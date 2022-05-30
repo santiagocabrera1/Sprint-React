@@ -5,7 +5,7 @@ import MainArea from './components/MainArea';
 import MainRoutes from './Routes/routes'
 import Sidebar from './components/Sidebar'
 import Header from './components/Header';
-import Content from './components/Content'
+import Content from './components/Content';
 
 function App() {
   const [menuOpened, setMenuOpened] = useState(false)
@@ -16,12 +16,13 @@ function App() {
   return (
     <div className="mainContainer">
       <BrowserRouter>
+
         <Sidebar isOpen={menuOpened} toggleMenu={toggleMenu} />
+        <Header />
         <MainArea toggleMenu={toggleMenu}>
           <MainRoutes />
         </MainArea>
-        <Header/>
-        <Content/>
+
       </BrowserRouter>
     </div>
   )

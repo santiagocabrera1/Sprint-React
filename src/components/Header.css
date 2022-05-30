@@ -38,6 +38,11 @@ input{
     border-radius: 20px;
     padding: 0 10px;
     background-color: rgba(51, 51, 51, 1);
+    width: 100%;
+}
+
+icon{
+    color: red;
 }
 
 form:hover{
