@@ -5,6 +5,8 @@ import React, {useState} from 'react';
 import MainRoutes  from './Routes/routes';
 import Sidebar from './components/Sidebar';
 import MainArea from './components/MainArea';
+import ArticleProducts from './components/ArticleProducts';
+import ProductList from './pages/Products/ProductsList/ProductsList';
 
 function App() {
   const [menuOpened, setMenuOpened] = useState(false);
