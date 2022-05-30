@@ -6,8 +6,6 @@ import MainRoutes from './Routes/routes'
 import Sidebar from './components/Sidebar'
 import Header from './components/Header';
 import Content from './components/Content';
-import Store from './components/Store';
-import Profile from './components/Profile';
 
 function App() {
   const [menuOpened, setMenuOpened] = useState(false)
