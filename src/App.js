@@ -1,9 +1,6 @@
-import './App.css'
-import React, { useState } from 'react'
-import { BrowserRouter } from 'react-router-dom'
-
 import './App.css';
 import React, { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import MainArea from './components/MainArea';
 import Header from './components/Header';
 import Content from './components/Content';
