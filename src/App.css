@@ -42,6 +42,7 @@ a:focus {
 
 .mainContainer {
   display: flex;
+  flex-flow: row wrap;
   min-height: 100vh;
   color: var(--primary-text-color);
   background-color: var(--primary-bg);
