@@ -1,5 +1,5 @@
-import React from 'react'
-import './MainArea.css'
+import React from 'react';
+import './MainArea.css';
 
 const MainArea = ({ children, toggleMenu }) => {
   return (
@@ -12,4 +12,4 @@ const MainArea = ({ children, toggleMenu }) => {
   )
 }
 
-export default MainArea
+export default MainArea;
