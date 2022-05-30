@@ -1,27 +1,27 @@
+import './App.css'
+import React, { useState } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
-import './App.css';
-import Test from './components/Test';
-import React, {useState} from 'react';
-import MainRoutes  from './Routes/routes';
-import Sidebar from './components/Sidebar';
-import MainArea from './components/MainArea';
-import ArticleProducts from './components/ArticleProducts';
-import ProductList from './pages/Products/ProductsList/ProductsList';
+import MainRoutes from './Routes/routes'
+import Sidebar from './components/Sidebar'
+import MainArea from './components/MainArea'
 
 function App() {
-  const [menuOpened, setMenuOpened] = useState(false);
+  const [menuOpened, setMenuOpened] = useState(false)
   const toggleMenu = () => {
-    setMenuOpened(!menuOpened); 
+    setMenuOpened(!menuOpened)
   }
 
   return (
-  <div className='mainContainer'>
-    <Sidebar isOpen={menuOpened} toggleMenu={toggleMenu} />
-    <MainArea toggleMenu={toggleMenu}>
-      <MainRoutes/>
-    </MainArea>
-  </div>
-  );
+    <div className="mainContainer">
+      <BrowserRouter>
+        <Sidebar isOpen={menuOpened} toggleMenu={toggleMenu} />
+        <MainArea toggleMenu={toggleMenu}>
+          <MainRoutes />
+        </MainArea>
+      </BrowserRouter>
+    </div>
+  )
 }
 
-export default App;
+export default App
