@@ -15,11 +15,12 @@ function App() {
 
   return (
     <div className='mainContainer'>
+      <Header />
       <Sidebar isOpen={menuOpened} toggleMenu={toggleMenu} />
     
       <MainArea toggleMenu={toggleMenu}>
       <MainRoutes />
-      <Header />
+      
       <Content />        
       </MainArea>
 
