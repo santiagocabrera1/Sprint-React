@@ -38,9 +38,9 @@ body.dark-mode {
   --sidebar-bg-small: var(--color-transparent-darkerGrey);
 }
 
-.mainContainer {
+/* .mainContainer {
   display: flex;
   min-height: 100vh;
   color: var(--primary-text-color);
   background-color: var(--primary-bg);
-}
+} */
