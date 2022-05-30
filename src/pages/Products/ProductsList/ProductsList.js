@@ -1,37 +1,40 @@
-import React, { Fragment } from 'react'
-import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import useFetch from '../../../hooks/useFetch'
 import ArticleProducts from '../../../components/ArticleProducts'
+import Header from '../../../components/Header'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const ProductList = () => {
-  const navigate = useNavigate()
-
-  const handleNavegation = () => {
-    navigate('/products/:id')
-  }
-
-  const handleAgregarProducto = () => {
-    navigate('.productos/new')
-  }
+  const [search, setSearch] = useState('')
+  const [filteredProducts, setFilteredProducts] = useState([])
   const { producto } = useFetch()
-  // const [products, setProducts] = useState([])
-  // useEffect (() =>{
-  //     fetch('http://localhost:3000/products')
-  //     .then( response=> response.json() )
-  //     .then(data => console.log(data))
-  // console.log(useFetch());
-  console.log(producto)
+
+  const handleChange = (event) => setSearch(event.target.value)
+
+  useEffect(() => {
+    const productResults = producto?.filter(({ title }) => title.toLowerCase().indexOf(search.toLowerCase()) != -1)
+    setFilteredProducts(productResults)
+  }, [producto, search])
+
   return (
-    <Fragment>
-      {/* {console.log(products)} */}
+    <>
+      <Header title={'Productos'}>
+        <div className="searchHeader">
+          <FontAwesomeIcon icon={faSearch} />
+          <input type="search" value={search} onChange={handleChange} placeholder="Buscar productos" />
+        </div>
+        {/* <Link to="/products/new" className="agregarProducto">
+          Agregar Producto
+        </Link> */}
+      </Header>
       <div>
-        {producto?.map((product) => (
+        {filteredProducts?.map((product) => (
           <ArticleProducts title={product.title} id={product.id} img={product.image} key={product.id} />
         ))}
-        {/* <button className='agregarProducto' onClick={handleAgregarProducto}></button> */}
       </div>
-    </Fragment>
+    </>
   )
 }
 

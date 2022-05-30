@@ -1,62 +1,61 @@
-
 .categoryContainer svg {
-    color: #fff;
-    margin-right: 10px;
-    font-size: 30px;
+  color: var(--primary-text-color);
+  margin-right: 10px;
+  font-size: 30px;
 }
 
 .categoryContainer div p {
-    color: #fff;
+  color: var(--primary-text-color);
 }
 
 .categoryContainer div {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    margin: 5px auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 5px auto;
 }
 
 .categoryContainer {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    padding: 10px 20px;
-    background-color: #2b2b2b;
-    box-shadow: 5px 5px 10px #1a1a1a ;
-    margin: 10px auto;
-    transition: all .35s ease-in-out;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 10px 20px;
+  background-color: var(--primary-bg);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  margin: 10px auto;
+  transition: all 0.35s ease-in-out;
 }
-.categoryContainer:hover{
-    transform: scale(1.05);
+.categoryContainer:hover {
+  transform: scale(1.05);
 }
 .categoryContainer button {
-    border-radius: 15px;
-    width: 100%;
-    color: #fff;
-    padding: 8px 20px;
-    background-color: #494e50;
-    border: 0;
-    margin: 5px auto;
-    transition: all .35s ease-in-out;
+  border-radius: 15px;
+  width: 100%;
+  color: var(--primary-text-color);
+  padding: 8px 20px;
+  background-color: var(--color-lightGrey);
+  border: 0;
+  margin: 5px auto;
+  transition: all 0.35s ease-in-out;
 }
 .categoryContainer button:hover {
-    background-color: #0cac90;
+  background-color: var(--color-green);
 }
 
 @media (min-width: 758px) {
-    .categoryContainer div {
-        flex-direction: row;
-        justify-content: space-around;
-        margin: 0 0;
-    }
-    .categoryContainer button {
-        display: block;
-        width: auto;
-        margin-right: 10px;
-    }
-    .categoryContainer {
-        justify-content: space-between;
-    }
+  .categoryContainer div {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 0;
+  }
+  .categoryContainer button {
+    display: block;
+    width: auto;
+    margin-right: 10px;
+  }
+  .categoryContainer {
+    justify-content: space-between;
+  }
 }
