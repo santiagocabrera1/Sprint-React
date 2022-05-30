@@ -1,0 +1,16 @@
+
+.homeContainer {
+    background-color: #212121;
+    height: 100vh;
+    transition: .4s all ease-in-out;
+}
+.homeContainer section{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.homeContainer section h1 {
+    color: #fff;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
