@@ -1,5 +1,6 @@
 import React from 'react'
 import Switch from '../../components/Switch'
+import Header from '../../components/Header'
 
 import useDarkMode from '../../hooks/useDarkMode'
 
@@ -8,7 +9,7 @@ const Profile = () => {
   console.log(darkMode)
   return (
     <>
-      <div>Profile</div>
+      <Header title="Profile" />
       <Switch isChecked={darkMode} setIsChecked={setDarkMode} />
     </>
   )

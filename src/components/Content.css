@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contentSection{
+    color: white;
+    background-color: rgba(51, 51, 51, 1);
+    height: 100vh;
+    width: 100%;
+    padding: 0.8rem;
+}
