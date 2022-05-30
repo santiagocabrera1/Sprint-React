@@ -14,7 +14,6 @@ const  MainRoutes = () => {
                 <Route path="/products" element={<ProductsList/>}/>
                 <Route path="/products/:id" element={<ProductView/>}/>
                 <Route path="/profile" element={<Profile/>}/>
-                {/* <Route path="/Productos/new" element={<Products/>}/> */}
                 <Route path="/products/new" element={<NewProduct/>}/>
             </Routes>
         </BrowserRouter>
