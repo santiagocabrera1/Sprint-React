@@ -1,0 +1,18 @@
+.mainArea {
+    width: 100vw;
+    padding: 20px;
+    transition: width 0.3s ease-in-out;
+
+}
+
+
+@media(min-width: 1025px) {
+    .mainArea {        
+        width: calc(100vw - 296px); /* calc es el ancho total de la pantalla menos el ancho del sidebar, puedo restar vw menos px :) */
+        
+    }
+    button {
+        display: none;
+
+    }
+}
