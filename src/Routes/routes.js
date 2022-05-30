@@ -4,7 +4,7 @@ import Home from '../pages/Home/Home';
 import ProductsList from '../pages/Products/ProductsList/ProductsList'
 import ProductView from '../pages/ProductView/ProductView'
 import Profile from '../components/Profile';
-
+import NewProduct from '../pages/Products/New/NewProduct';
 const  MainRoutes = () => {
 
     return (
@@ -15,7 +15,7 @@ const  MainRoutes = () => {
                 <Route path="/products/:id" element={<ProductView/>}/>
                 <Route path="/profile" element={<Profile/>}/>
                 {/* <Route path="/Productos/new" element={<Products/>}/> */}
-                
+                <Route path="/products/new" element={<NewProduct/>}/>
             </Routes>
         </BrowserRouter>
     )
