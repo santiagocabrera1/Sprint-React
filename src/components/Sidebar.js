@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import oliviaLogo from '../assets/olivia.png'
-import MiEcommerce from '../assets/MiEcommerce.svg'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import oliviaLogo from '../assets/olivia.png';
+import MiEcommerce from '../assets/MiEcommerce.svg';
 
 import './Sidebar.css'
 
@@ -15,14 +15,14 @@ const Sidebar = ({ isOpen, toggleMenu }) => {
           <Link to="/products">Productos</Link>
           <Link to="/">Tiendas</Link>
         </nav>
-        <div className="linkPerfil">
+        <Link to="/profile" className="linkPerfil">
           <img src={oliviaLogo} alt="Imagen de perfil del usuario" />
           <span>Olivia</span>
-        </div>
+        </Link>
       </aside>
       {isOpen ? <div className="overlay" onClick={toggleMenu}></div> : null}
     </>
   )
 }
 
-export default Sidebar
+export default Sidebar;
