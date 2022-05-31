@@ -1,21 +1,78 @@
 .mainSidebar {
-    position: fixed;
-    left: -296px;
-    width: 296px;
-    height: auto;
-    padding: 20px;
-    transition: left 0.3s ease-in-out;
-    background-color: rgba(51, 51, 51, 1);
-    ;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: -296px;
+  width: 296px;
+  height: 100vh;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  box-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--sidebar-bg-small);
+  z-index: 5;
 }
 
 .mainSidebar.open {
-    left: 0;
+  left: 0;
 }
 
-@media(min-width: 1025px) {
-    .mainSidebar {
-        position: relative;
-        left: 0;
-    }
+.mainNavigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainNavigation a {
+  color: var(--primary-text-color);
+  font-size: 12px;
+  padding: 6px 8px;
+}
+
+.mainNavigation a:hover {
+  border-radius: 8px;
+  background-color: var(--secondary-bg);
+}
+
+.linkPerfil {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  height: 30px;
+  margin-top: auto;
+  padding: 0 14px 0 4px;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--secondary-bg);
+
+  color: var(--primary-text-color);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.mainLogo {
+  width: 210px;
+  margin-bottom: 40px;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 3;
+}
+
+@media (min-width: 1025px) {
+  .mainSidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--sidebar-bg);
+  }
 }
