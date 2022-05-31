@@ -15,10 +15,10 @@ const Sidebar = ({ isOpen, toggleMenu }) => {
           <Link to="/products">Productos</Link>
           <Link to="/">Tiendas</Link>
         </nav>
-        <div className="linkPerfil">
+        <Link to="/profile" className="linkPerfil">
           <img src={oliviaLogo} alt="Imagen de perfil del usuario" />
           <span>Olivia</span>
-        </div>
+        </Link>
       </aside>
       {isOpen ? <div className="overlay" onClick={toggleMenu}></div> : null}
     </>

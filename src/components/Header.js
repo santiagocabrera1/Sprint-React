@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import './Header.css';
 import {faBox, faShop} from '@fortawesome/free-solid-svg-icons';
@@ -28,6 +29,8 @@ const Header = () => {
             </form>
         </div>
     )
-}
 
-export default Header;
+
+
+
+export default Header

@@ -7,8 +7,11 @@ import Loader from '../../../components/Loader';
 
 
 const ProductList = () => {
+  const navigate = useNavigate()
 
-    const navigate = useNavigate() 
+  const handleNavegation = () => {
+    navigate('/products/:id')
+  }
 
     const handleNavegation = () =>{
         navigate ('/products/:id')
@@ -39,4 +42,4 @@ const ProductList = () => {
     )
 }
 
-export default ProductList;
+export default ProductList
