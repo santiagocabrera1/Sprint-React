@@ -1,59 +1,58 @@
-.formContainer{
-    background-color: #212121;
-    min-height: 100vh;
-    transition: .4s all ease-in-out;
+.formContainer {
+  background-color: var(--primary-bg);
+  min-height: 100vh;
+  transition: 0.4s all ease-in-out;
 }
 
-.formContainer section{
-    width: 90%;
-    margin: 0 auto;
+.formContainer section {
+  width: 90%;
+  margin: 0 auto;
 }
 
-.formContainer h3, .formContainer label{
-    color: #fff;
-    font-weight: 300;
+.formContainer h3,
+.formContainer label {
+  color: var(--primary-text-color);
+  font-weight: 300;
 }
-.formContainer label{
-    font-size: 12px;
-    width: 100%;
-    margin-bottom: 5px;
+.formContainer label {
+  font-size: 12px;
+  width: 100%;
+  margin-bottom: 5px;
 }
-
 
 /* Formulario */
-fieldset{
-    margin: 15px auto;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+fieldset {
+  margin: 15px auto;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.formContainer form input, form textarea{
-    color: #fff;
-    background-color: #333333;
-    border: 1px #919191 solid;
-    padding: 8px 20px;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
+.formContainer form input,
+form textarea {
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg);
+  border: 1px #919191 solid;
+  padding: 8px 20px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
 }
 
-.formContainer fieldset select{
-    
-    color: #fff;
-    background-color: #333333;
-    border: 1px #919191 solid;
-    border: 0;
-    border-radius: 20px;
-    width: 100%;
-    padding: 8px 20px;
-    
+.formContainer fieldset select {
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg);
+  border: 1px #919191 solid;
+  border: 0;
+  border-radius: 20px;
+  width: 100%;
+  padding: 8px 20px;
 }
 /* 
 .test{
@@ -61,23 +60,22 @@ fieldset{
     border: 2px solid  red;
 } */
 
-.formContainer .relative{
-    position: relative;
+.formContainer .relative {
+  position: relative;
 }
 
-.formContainer input[name="stock"]{
-    text-align: center;
+.formContainer input[name='stock'] {
+  text-align: center;
 }
-.formContainer fieldset svg{
-    color: #fff;
-    position: absolute;
+.formContainer fieldset svg {
+  color: var(--primary-text-color);
+  position: absolute;
 }
-.formContainer fieldset svg[data-icon="minus"]{
-    right: 10%;
-    top: 55%;
+.formContainer fieldset svg[data-icon='minus'] {
+  right: 10%;
+  top: 55%;
 }
-.formContainer fieldset svg[data-icon="plus"]{
-    top: 55%;
-    left: 10%;
-
+.formContainer fieldset svg[data-icon='plus'] {
+  top: 55%;
+  left: 10%;
 }
