@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import './ProductView.css';
+import ButtonOfelia from '../../components/ButtonOfelia';
 
 const ProductView = () => {
   const id = 2
@@ -30,8 +31,8 @@ const ProductView = () => {
           <p>999</p>
           <span>Stock Disponble</span>
           </div>
+        <ButtonOfelia/>
         </div>
-        {/* <ButtonOlivia/> */}
       </div>
     </>
   )
