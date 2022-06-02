@@ -1,40 +1,85 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faPlus, faMinus} from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
+import { useEffect, useState } from 'react'
+
 import './FormProducts.css'
 
-const formProducts = ({type, action, product}) => {
+
+const FormProducts = ({ type, action, product }) => {
+    const [form, setForm] = useState({});
+    let { title, price, stock, description, store, file } = form;
+    const handleChage = (e) => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        })
+        console.log(e.target.name, ": ", e.target.value);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        fetch('http://localhost:3000/products/', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(form)
+        });
+    }
+    const handleEdit = (e) => {
+        e.preventDefault();
+        fetch(`http://localhost:3000/products/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        });
+    }
+    const handleDelete = (e) => {
+        e.preventDefault();
+        fetch(`http://localhost:3000/products/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        });
+    }
+
     return (
         <section>
             <h3>Informacion</h3>
             <form action={action}>
                 <fieldset>
-                    <label for="title" >Titulo</label>
-                    <input type="text" placeholder='Titulo' name='title' id='title' value={type === "edit" ? product.title : "" } />
+                    <label htmlFor="title" >Titulo</label>
+                    <input onInput={(e) => handleChage(e)} type="text" placeholder='Titulo' name='title' id='title' value={type === "edit" ? product.title : title} />
                 </fieldset>
 
                 <fieldset>
-                    <label for="price" >Precio</label>
-                    <input type="number" placeholder='Precio' name='price' id='price' value={type === "edit" ? product.price : "" }/>
+                    <label htmlFor="price" >Precio</label>
+                    <input onInput={(e) => handleChage(e)} type="number" placeholder='Precio' name='price' id='price' value={type === "edit" ? product.price : price} />
                 </fieldset>
 
                 <fieldset className='relative'>
-                    <label for="stock" >Stock</label>
-                    <input type="number" placeholder='Stock' name='stock' id='stock' value={type === "edit" ? product.stock : "" }/>
+                    <label htmlFor="stock" >Stock</label>
+                    <input onInput={(e) => handleChage(e)} type="number" placeholder='Stock' name='stock' id='stock' value={type === "edit" ? product.stock : stock} />
                     <FontAwesomeIcon icon={faPlus} />
                     <FontAwesomeIcon icon={faMinus} />
                 </fieldset>
 
                 <fieldset>
-                    <label for="description" >Descripción</label>
-                    <textarea id='description' name="description" cols="30" rows="10" placeholder="Descripción" value={type === "edit" ? product.description : "" }></textarea>
+                    <label htmlFor="description" >Descripción</label>
+                    <textarea onChange={(e) => handleChage(e)} id='description' name="description" cols="30" rows="10" placeholder="Descripción" value={type === "edit" ? product.description : description}></textarea>
                 </fieldset>
 
                 <fieldset >
-                    <label class="" for='Store'>Tienda</label>
-                    <select name="brand" class="" id='Store'>
-                        <option value="-1" selected>Seleccione una Tienda</option>
-                        <option value></option>
+                    <label htmlFor='Store'>Tienda</label>
+                    <select name="store" id='Store' defaultValue="-1">
+                        <option value="-1" >Seleccione una Tienda</option>
+                        <option value="1">Otra opcion </option>
                     </select>
                 </fieldset>
 
@@ -44,11 +89,11 @@ const formProducts = ({type, action, product}) => {
                     <input type="file" name="images" multiple />
                 </fieldset>
 
-                <button>Guardar</button>
+                {type=="create" && <button onClick={(e) => handleSubmit(e)}>Guardar</button>}
                 <button>Cancelar</button>
             </form>
         </section>
     )
 }
 
-export default formProducts
+export default FormProducts;

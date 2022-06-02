@@ -4,7 +4,7 @@ import FormProducts from '../../../components/FormProducts'
 const NewProduct = () => {
     return (
         <div className='formContainer' >
-            <FormProducts type="create" action='/'/>
+            <FormProducts type="" action='/'/>
         </div >
     )
 }

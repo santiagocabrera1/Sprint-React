@@ -1,6 +1,5 @@
 {
-  "products": 
-  [
+  "products": [
     {
       "gallery": [],
       "mostwanted": false,
@@ -357,6 +356,13 @@
         "rate": 3.6,
         "count": 145
       }
+    },
+    {
+      "title": "Producto prueba",
+      "price": "2000",
+      "stock": "20",
+      "description": "descripcion",
+      "id": 30
     }
   ]
 }
