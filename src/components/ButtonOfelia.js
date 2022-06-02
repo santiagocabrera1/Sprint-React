@@ -13,4 +13,4 @@ const ButtonOfelia = () => {
   )
 }
 
-export default ButtonOfelia
+export default ButtonOfelia;

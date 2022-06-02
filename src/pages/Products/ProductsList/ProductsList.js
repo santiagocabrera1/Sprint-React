@@ -5,11 +5,13 @@ import ArticleProducts from '../../../components/ArticleProducts'
 import Header from '../../../components/Header'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import Loader from '../../../components/Loader';
 
 const ProductList = () => {
   const [search, setSearch] = useState('')
   const [filteredProducts, setFilteredProducts] = useState([])
   const { producto } = useFetch()
+  const [loading,setLoading] = useState(false);
 
   const handleChange = (event) => setSearch(event.target.value)
 
@@ -33,9 +35,10 @@ const ProductList = () => {
         {filteredProducts?.map((product) => (
           <ArticleProducts title={product.title} id={product.id} img={product.image} key={product.id} />
         ))}
+        {loading && <Loader/>}
       </div>
     </>
   )
 }
 
-export default ProductList
+export default ProductList;
