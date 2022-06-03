@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import useFetch from '../../../hooks/useFetch'
-import ArticleProducts from '../../../components/ArticleProducts'
-import Header from '../../../components/Header'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import useFetch from '../../../hooks/useFetch';
+import ArticleProducts from '../../../components/ArticleProducts';
+import Header from '../../../components/Header';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Loader from '../../../components/Loader';
 
 const ProductList = () => {
   const [search, setSearch] = useState('')
   const [filteredProducts, setFilteredProducts] = useState([])
-  const { producto } = useFetch()
+  const {producto} = useFetch()
   const [loading,setLoading] = useState(false);
 
   const handleChange = (event) => setSearch(event.target.value)
