@@ -28,7 +28,7 @@
   transition: all 0.35s ease-in-out;
 }
 .categoryContainer:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 .categoryContainer button {
   border-radius: 15px;

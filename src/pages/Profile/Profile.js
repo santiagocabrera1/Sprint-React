@@ -1,8 +1,7 @@
-import React from 'react'
-import Switch from '../../components/Switch'
-import Header from '../../components/Header'
-
-import useDarkMode from '../../hooks/useDarkMode'
+import React from 'react';
+import Switch from '../../components/Switch';
+import Header from '../../components/Header';
+import useDarkMode from '../../hooks/useDarkMode';
 
 const Profile = () => {
   const [darkMode, setDarkMode] = useDarkMode()
@@ -15,4 +14,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default Profile;

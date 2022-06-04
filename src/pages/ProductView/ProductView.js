@@ -2,9 +2,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import './ProductView.css';
 import ButtonOfelia from '../../components/ButtonOfelia';
+import { useParams } from 'react-router-dom';
 
 const ProductView = () => {
-  const id = 2
+  const id = useParams().id;
 
   const [product, setProduct] = useState([])
 
@@ -16,7 +17,7 @@ const ProductView = () => {
 
   return (
     <>
-         <div><h3 className='titleProduct'>Productos{product.id}</h3></div>
+      <div><h3 className='titleProduct'>Productos{product.id}</h3></div>
       <div className='productContainer'>
         <div className='imgProducts'>
           <img src={product.image} />
@@ -24,16 +25,18 @@ const ProductView = () => {
         <div className='productDescription'>
           <h3>{product.title}</h3>
           <div className='puntosSuperClub'>
-          <p>19.990</p>
-          <span>Puntos SuperClub</span>
+            <p>19.990</p>
+            <span>Puntos SuperClub</span>
           </div>
           <div>
-          <p>999</p>
-          <span>Stock Disponble</span>
+            <p>999</p>
+            <span>Stock Disponble</span>
           </div>
-        <ButtonOfelia/>
+          <ButtonOfelia />
         </div>
       </div>
+
+      <FormProducts/>
     </>
   )
 }
