@@ -3,11 +3,19 @@ import { Link } from 'react-router-dom'
 
 import './Btn.css'
 
-const Btn = ({ to, children }) => {
+const Btn = ({ to, handleClick, children }) => {
   return (
-    <Link to={to} className="buttonComponent">
-      {children}
-    </Link>
+    <>
+      {to ? (
+        <Link to={to} className="buttonComponent">
+          {children}
+        </Link>
+      ) : (
+        <button className="buttonComponent" onClick={handleClick}>
+          {children}
+        </button>
+      )}
+    </>
   )
 }
 

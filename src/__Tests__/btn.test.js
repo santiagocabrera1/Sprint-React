@@ -4,7 +4,7 @@ import Btn from '../components/Btn'
 import { MemoryRouter } from 'react-router-dom'
 
 // describe es para describir un conjunto de tests
-describe('Btn: Componente de Link con forma de Pill', () => {
+describe('Btn: Componente que renderiza un boton o link con forma de Pill', () => {
   // cada test tiene una descripcion de lo que se va a testear
   // cada test tiene que ser lo mas pequeño y puntual posible
   test('renderiza un Link con una URL que se pasa por props', () => {
@@ -17,7 +17,7 @@ describe('Btn: Componente de Link con forma de Pill', () => {
     expect(btn).toHaveAttribute('href', '/products')
   })
 
-  test('renderiza un Link con una contenido que se pasa por children', () => {
+  test('renderiza un Link con un contenido que se pasa por children', () => {
     render(<Btn to="/products">Products</Btn>, { wrapper: MemoryRouter })
 
     const btn = screen.getByRole('link')
@@ -25,5 +25,15 @@ describe('Btn: Componente de Link con forma de Pill', () => {
     // espero que al renderizar btn matchee el snapshot que saco jest
     // un snapshot es una "foto" de un momento determinado, estan en __snapshoots__
     expect(btn).toMatchSnapshot()
+  })
+
+  test('renderiza un button con un contenido que se pasa por children', () => {
+    render(<Btn>Eliminar Producto</Btn>)
+
+    const btn = screen.getByRole('button')
+
+    expect(btn).toMatchSnapshot()
+    // query no falla si no encuentra el elemento, getByRole falla automaticamente
+    expect(screen.queryByRole('link')).not.toBeInTheDocument()
   })
 })
