@@ -2,9 +2,10 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import './ProductView.css'
 import ButtonOfelia from '../../components/ButtonOfelia'
+import { useParams } from 'react-router-dom'
 
 const ProductView = () => {
-  const id = 2
+  const id = useParams().id
 
   const [product, setProduct] = useState([])
 

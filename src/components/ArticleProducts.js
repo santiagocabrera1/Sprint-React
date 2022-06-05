@@ -9,7 +9,7 @@ function ArticleProducts({ title, id, img }) {
         <>
          <Link to = {`/products/${id}`}className='productContainer'>
             <div className='imgProducts'>
-                <img src={img} />
+                <img src={img}/>
             </div>
             <div className='productDescription'>
                 <h3 className='productTitle'>{title}</h3>
