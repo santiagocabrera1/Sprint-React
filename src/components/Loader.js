@@ -1,10 +1,12 @@
-import React from 'react';
-import './Loader.css';
+import React from 'react'
+import './Loader.css'
 
 function Loader() {
   return (
-    <div className='preloader'>Cargando</div>
+    <div className="preloaderContainer">
+      <div className="preloader"></div>
+    </div>
   )
 }
 
-export default Loader;
+export default Loader
