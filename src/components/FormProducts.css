@@ -1,58 +1,59 @@
-
-
 /* Formulario */
-fieldset{
-    margin: 15px auto;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+fieldset {
+  margin: 15px auto;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.formContainer form input, form textarea{
-    color: #fff;
-    background-color: #333333;
-    border: 1px #919191 solid;
-    padding: 8px 20px;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.formContainer fieldset select{
-    
-    color: #fff;
-    background-color: #333333;
-    border: 1px #919191 solid;
-    border: 0;
-    border-radius: 20px;
-    width: 100%;
-    padding: 8px 20px;
-    
+.formContainer form input,
+form textarea {
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg);
+  border: 1px #919191 solid;
+  padding: 8px 20px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
 }
 
-.formContainer .relative{
-    position: relative;
+.formContainer fieldset select {
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+  border: 1px #919191 solid;
+  border: 0;
+  border-radius: 20px;
+  width: 100%;
+  padding: 8px 20px;
 }
 
-.formContainer input[name="stock"]{
-    text-align: center;
+.formContainer .relative {
+  position: relative;
 }
-.formContainer fieldset svg{
-    color: #fff;
-    position: absolute;
-}
-.formContainer fieldset svg[data-icon="minus"]{
-    right: 10%;
-    top: 55%;
-}
-.formContainer fieldset svg[data-icon="plus"]{
-    top: 55%;
-    left: 10%;
 
+.formContainer input[name='stock'] {
+  text-align: center;
+}
+.formContainer fieldset svg {
+  color: var(--primary-text-color);
+  position: absolute;
+}
+.formContainer fieldset svg[data-icon='minus'] {
+  right: 10%;
+  top: 55%;
+}
+.formContainer fieldset svg[data-icon='plus'] {
+  top: 55%;
+  left: 10%;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 10px;
 }
