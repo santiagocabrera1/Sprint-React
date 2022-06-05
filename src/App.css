@@ -25,6 +25,7 @@ a:focus {
   --color-red: rgba(255, 0, 0, 1);
 
   --primary-text-color: var(--color-darkerGrey);
+  --secondary-text-color: var(--color-mediumGrey);
   --primary-bg: var(--color-white);
   --secondary-bg: var(--color-lightGrey);
   --element-bg: var(--color-mediumGrey);
@@ -34,6 +35,7 @@ a:focus {
 
 body.dark-mode {
   --primary-text-color: var(--color-white);
+  --secondary-text-color: var(--color-white);
   --primary-bg: var(--color-darkerGrey);
   --secondary-bg: var(--color-darkGrey);
   --element-bg: var(--color-darkMediumGrey);

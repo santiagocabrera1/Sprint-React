@@ -1,8 +1,9 @@
 import React from 'react'
 import './ArticleHome.css'
+import Btn from './Btn'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const ArticleHome = ({ titulo, cantidad, icon }) => {
+const ArticleHome = ({ titulo, url, cantidad, icon }) => {
   return (
     <article className="categoryContainer">
       <div>
@@ -11,9 +12,9 @@ const ArticleHome = ({ titulo, cantidad, icon }) => {
           <b>{cantidad}</b> {titulo}
         </p>
       </div>
-      <div>
-        <button>Ver listado</button>
-        <button>Agregar {titulo}</button>
+      <div className="buttonsContainer">
+        <Btn to={url}>Ver listado</Btn>
+        <Btn to={`${url}/new`}>Agregar {titulo}</Btn>
       </div>
     </article>
   )

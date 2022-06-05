@@ -8,8 +8,8 @@ const Home = () => {
     <div className="homeContainer">
       <section>
         <h1>¡Hola User! </h1>
-        <ArticleHome titulo="Productos" cantidad={123} icon={faBox} />
-        <ArticleHome titulo="Tienda" cantidad={10} icon={faShop} />
+        <ArticleHome titulo="Productos" url={'/products'} cantidad={123} icon={faBox} />
+        <ArticleHome titulo="Tienda" url={'/store'} cantidad={10} icon={faShop} />
       </section>
     </div>
   )
