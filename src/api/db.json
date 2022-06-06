@@ -364,6 +364,14 @@
       "description": "dfgd",
       "image": "https://www.fillmurray.com/g/300/300",
       "id": 30
+    },
+    {
+      "title": "asd",
+      "price": "1234",
+      "stock": "55",
+      "description": "prueba",
+      "image": "http://placekitten.com/100/100",
+      "id": 31
     }
   ]
 }

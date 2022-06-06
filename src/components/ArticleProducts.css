@@ -13,7 +13,6 @@
 .imgProducts {
   width: 100%;
   border-radius: 1rem;
-
   background-color: var(--primary-bg);
 }
 .productDescription h3 {
