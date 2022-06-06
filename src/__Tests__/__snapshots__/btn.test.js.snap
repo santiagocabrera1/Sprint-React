@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Btn: Componente que renderiza un boton o link con forma de Pill renderiza un Link con un contenido que se pasa por children 1`] = `
+<a
+  class="buttonComponent"
+  href="/products"
+>
+  Products
+</a>
+`;
+
+exports[`Btn: Componente que renderiza un boton o link con forma de Pill renderiza un button con un contenido que se pasa por children 1`] = `
+<button
+  class="buttonComponent"
+>
+  Eliminar Producto
+</button>
+`;

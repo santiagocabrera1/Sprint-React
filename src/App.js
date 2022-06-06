@@ -4,8 +4,11 @@ import { BrowserRouter } from 'react-router-dom'
 import MainArea from './components/MainArea'
 import MainRoutes from './Routes/routes'
 import Sidebar from './components/Sidebar'
+import useDarkMode from './hooks/useDarkMode'
 
 function App() {
+  useDarkMode()
+
   const [menuOpened, setMenuOpened] = useState(false)
   const toggleMenu = () => {
     setMenuOpened(!menuOpened)
@@ -23,4 +26,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

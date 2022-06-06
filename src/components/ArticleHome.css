@@ -44,6 +44,11 @@
   background-color: var(--color-green);
 }
 
+.buttonsContainer {
+  display: flex;
+  gap: 10px;
+}
+
 @media (min-width: 758px) {
   .categoryContainer div {
     flex-direction: row;

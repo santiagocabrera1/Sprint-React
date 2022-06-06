@@ -15,6 +15,7 @@ const MainRoutes = () => {
       <Route path="/profile" element={<Profile />} />
       <Route path="/store" element={<Store />} />
       <Route path="/products/new" element={<NewProduct />} />
+      <Route path="*" element={<Store />} />
     </Routes>
   )
 }
