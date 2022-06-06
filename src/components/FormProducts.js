@@ -17,10 +17,19 @@ const FormProducts = ({ type, action, product }) => {
   const navigate = useNavigate()
   const [error, setError] = useState(false)
   const [form, setForm] = useState(product || {})
-  let { title, price, stock, description, image, store, file } = form
+  let { title, price, stock, description, image, store } = form
 
   const handleChange = (e) => {
-    console.log(e.target.name, e.target.value)
+    if (e.target.value === "") {
+      e.target.parentNode.classList.add('error')
+      e.target.parentNode.querySelector('small').innerHTML = `${e.target.parentNode.querySelector('label').innerHTML} no puede estar vacio`
+      e.target.parentNode.querySelector('small').style.display = "block";
+      e.target.style.border = " #F20789 3px solid"
+    } else {
+      e.target.parentNode.classList.remove('error')
+      e.target.parentNode.querySelector('small').style.display = "none";
+      e.target.style.border = ""
+    }
     setForm({
       ...form,
       [e.target.name]: e.target.value,
@@ -70,6 +79,7 @@ const FormProducts = ({ type, action, product }) => {
             id="title"
             value={title}
           />
+          <small></small>
         </fieldset>
 
         <fieldset>
@@ -82,6 +92,7 @@ const FormProducts = ({ type, action, product }) => {
             id="price"
             value={price}
           />
+          <small></small>
         </fieldset>
 
         <fieldset className="relative">
@@ -96,6 +107,7 @@ const FormProducts = ({ type, action, product }) => {
           />
           <FontAwesomeIcon icon={faPlus} />
           <FontAwesomeIcon icon={faMinus} />
+          <small></small>
         </fieldset>
 
         <fieldset>
@@ -109,6 +121,7 @@ const FormProducts = ({ type, action, product }) => {
             placeholder="Descripción"
             value={description}
           ></textarea>
+          <small></small>
         </fieldset>
 
         <fieldset>
@@ -121,8 +134,9 @@ const FormProducts = ({ type, action, product }) => {
 
         <h3>Galeria de Imagenes</h3>
         <fieldset>
-          <label>Nueva Imagen</label>
-          <input type="text" name="image" value={image} onChange={(e) => handleChange(e)} />
+          <label htmlFor= "imagen">Nueva Imagen</label>
+          <input type="text" name="image" id="imagen" value={image} onChange={(e) => handleChange(e)} />
+          <small></small>
         </fieldset>
 
         <div className="buttonsContainer">

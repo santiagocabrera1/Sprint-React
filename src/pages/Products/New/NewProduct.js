@@ -1,14 +1,6 @@
 import React from 'react'
 import './NewProduct.css'
 import FormProducts from '../../../components/FormProducts'
-<<<<<<< HEAD
-const NewProduct = () => {
-    return (
-        <div className='formContainer' >
-            <FormProducts type="" action='/'/>
-        </div >
-    )
-=======
 import Header from '../../../components/Header'
 
 const NewProduct = () => {
@@ -16,11 +8,10 @@ const NewProduct = () => {
     <>
       <Header title="Agregar Producto" />
       <div className="newProduct">
-        <FormProducts type="create" />
+        <FormProducts type="create" action={"/"} product = {{}} />
       </div>
     </>
   )
->>>>>>> main
 }
 
 export default NewProduct
