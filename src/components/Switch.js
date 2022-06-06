@@ -1,5 +1,5 @@
-import React from 'react'
-import './Switch.css'
+import React from 'react';
+import './Switch.css';
 
 const Switch = ({ isChecked = false, setIsChecked }) => {
   const handleChange = (e) => {
@@ -16,4 +16,4 @@ const Switch = ({ isChecked = false, setIsChecked }) => {
   )
 }
 
-export default Switch
+export default Switch;

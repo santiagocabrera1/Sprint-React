@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import oliviaLogo from '../assets/olivia.png'
 import MiEcommerce from '../assets/MiEcommerce.svg'
-
 import './Sidebar.css'
 
 const Sidebar = ({ isOpen, toggleMenu }) => {
