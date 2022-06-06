@@ -4,12 +4,12 @@ import SideBar from '../components/Sidebar';
 import { MemoryRouter } from 'react-router-dom';
 
 describe(' SideBar' , () => {
-    test('ButtonProducts', () =>{
+    test('ButtonProducts', () => {
         //Renderizamos el componente que queremos testear
-        //Usamos el MmemoryRouter porque dentro de sidebar se encuentran los links de navbar
+        //Usamos el MemoryRouter porque dentro de sidebar se encuentran los links de navbar
         render( <SideBar/>, { wrapper: MemoryRouter } )
         //Nos aseguramos de que el link de productos exista y lo pasamos a una variable
-        const  button=screen.getByRole('link',{name:/productos/i})
+        const  button=screen.getByRole('link', {name:/productos/i})
         //Y en la priemra asercion buscamos que button nos lleve a /products
         expect(button).toHaveAttribute('href','/products')
         //Y en la segunda asercion buscamos que button matchee con productos (que es el nombre del boton)
@@ -18,7 +18,7 @@ describe(' SideBar' , () => {
 
     test('ButtonTienda', () =>{
         //Renderizamos el componente que queremos testear
-        //Usamos el MmemoryRouter porque dentro de sidebar se encuentran los links de navbar
+        //Usamos el MemoryRouter porque dentro de sidebar se encuentran los links de navbar
         render( <SideBar/>, { wrapper: MemoryRouter } )
         //Nos aseguramos de que el link de productos exista y lo pasamos a una variable
         const  button=screen.getByRole('link',{name:/tienda/i})
