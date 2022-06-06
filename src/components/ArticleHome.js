@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './ArticleHome.css'
 import Btn from './Btn'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ArticleHome = ({ titulo, url, cantidad, icon }) => {
-  const [cantidadProductos, setCantidadProductos] = useState(0)
-  useEffect(() => {
-    fetch('http://localhost:3000/products')
-      .then((response) => response.json())
-      .then((data) => setCantidadProductos(data.length))
-  })
   return (
     <article className="categoryContainer">
       <div>
