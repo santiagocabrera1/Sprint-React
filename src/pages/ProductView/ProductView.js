@@ -33,26 +33,6 @@ const ProductView = () => {
 
   return (
     <>
-<<<<<<< HEAD
-      <div><h3 className='titleProduct'>Productos{product.id}</h3></div>
-      <div className='productContainer'>
-        <div className='imgProducts'>
-          <img src={product.image} />
-        </div>
-        <div className='productDescription'>
-          <h3>{product.title}</h3>
-          <div className='puntosSuperClub'>
-            <p>19.990</p>
-            <span>Puntos SuperClub</span>
-          </div>
-          <div>
-            <p>999</p>
-            <span>Stock Disponble</span>
-          </div>
-          <ButtonOfelia />
-        </div>
-      </div>
-=======
       {product?.id ? (
         <>
           <Header title={`Productos > #${product.id}`}>
@@ -82,7 +62,6 @@ const ProductView = () => {
       ) : (
         <h1>No Se encontro el producto</h1>
       )}
->>>>>>> 2062920181063e324b7274375a29430d3c6839ec
     </>
   )
 }
