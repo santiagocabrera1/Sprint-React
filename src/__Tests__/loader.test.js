@@ -8,7 +8,7 @@ describe('renderiza el componente loader', () =>{
         render(<Loader/>)
         const element = screen.getByTestId('custom-element')
     })
-    test('primer div se renderiza', () =>{
+    test('segundo div se renderiza', () =>{
         render(<Loader/>)
         const element = screen.getByTestId('custom-element2')
         })

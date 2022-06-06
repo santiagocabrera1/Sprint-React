@@ -5,7 +5,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const MainArea = ({ children, toggleMenu }) => {
   return (
-    <div className="mainArea">
+    <div data-testid="custom-element3" className="mainArea">
       <button className="menuToggle" onClick={toggleMenu}>
         <FontAwesomeIcon icon={faBars} />
       </button>
