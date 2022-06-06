@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import './ArticleHome.css'
-import Btn from './Btn'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useEffect, useState } from 'react';
+import './ArticleHome.css';
+import Btn from './Btn';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const ArticleHome = ({ titulo, url, cantidad, icon }) => {
+const ArticleHome = ({ titulo, url, cantidad, icon}) => {
   const [cantidadProductos, setCantidadProductos] = useState(0)
   useEffect(() => {
     fetch('http://localhost:3000/products')
@@ -26,4 +26,4 @@ const ArticleHome = ({ titulo, url, cantidad, icon }) => {
   )
 }
 
-export default ArticleHome
+export default ArticleHome;

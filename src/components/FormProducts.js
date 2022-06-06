@@ -1,8 +1,8 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Btn from '../components/Btn'
 
@@ -137,4 +137,4 @@ const FormProducts = ({ type, action, product }) => {
   )
 }
 
-export default FormProducts
+export default FormProducts;
