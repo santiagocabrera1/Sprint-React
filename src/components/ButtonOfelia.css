@@ -1,0 +1,15 @@
+.ButtonOfelia {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 30px;
+  padding: 0 14px 0 4px;
+
+  border: none;
+  border-radius: 15px;
+  background-color: var(--secondary-bg);
+
+  color: var(--primary-text-color);
+  text-decoration: none;
+  font-size: 12px;
+}

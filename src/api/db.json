@@ -3,10 +3,10 @@
     {
       "gallery": [],
       "mostwanted": false,
-      "stock": 0,
+      "stock": "6",
       "store": null,
       "id": "1",
-      "title": "Alfajores 70% Cacao Puro x 9 uds",
+      "title": "Alfajores 70% Cacao Puro x 12 uds",
       "price": 15250,
       "description": "Alfajores rellenos con dulce de leche con cobertura de chocolate 70% Cacao Puro x 9 unidades",
       "image": "https://tienda.havanna.com.ar/wp-content/uploads/2020/10/alfajor70caco.jpg",
@@ -27,7 +27,7 @@
     {
       "gallery": [],
       "mostwanted": true,
-      "stock": 0,
+      "stock": "10",
       "store": null,
       "id": "3",
       "title": "Chromecast Full HD carbón",
@@ -358,10 +358,18 @@
       }
     },
     {
+<<<<<<< HEAD
       "title": "Producto prueba",
       "price": "2000",
       "stock": "20",
       "description": "descripcion",
+=======
+      "title": "pepe",
+      "price": "45",
+      "stock": "55",
+      "description": "dfgd",
+      "image": "https://www.fillmurray.com/g/300/300",
+>>>>>>> main
       "id": 30
     }
   ]

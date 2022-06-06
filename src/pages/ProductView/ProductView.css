@@ -1,0 +1,63 @@
+/* Contenedor  */
+.productView {
+  padding: 20px;
+}
+.productContainerView {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background-color: var(--primary-bg);
+  border-radius: 16px;
+}
+
+.imgProductsView {
+  width: 20%;
+}
+
+.imgProductsView img {
+  border-radius: 16px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.titleProductView {
+  width: 70%;
+}
+
+.productDescriptionView {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--primary-text-color);
+  width: 100%;
+  gap: 15px;
+}
+
+.titleProductView {
+}
+
+.puntosSuperClub {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.puntosSuperClub p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.puntosSuperClub span {
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .imgProducts {
+    width: 20%;
+  }
+
+  .productDescription {
+    width: 80%;
+  }
+}
