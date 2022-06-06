@@ -57,11 +57,6 @@ form textarea {
   width: 100%;
   padding: 8px 20px;
 }
-/* 
-.test{
-    width:100vw !important;
-    border: 2px solid  red;
-} */
 
 .formContainer .relative {
   position: relative;
@@ -81,4 +76,36 @@ form textarea {
 .formContainer fieldset svg[data-icon='plus'] {
   top: 55%;
   left: 10%;
+}
+
+
+.error{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  position: relative;
+}
+.error input, .error textarea, .error select{
+  border: #F20789 3px solid;
+}
+fieldset small, fieldset i[class = "fas fa-exclamation-circle"]{display: none;}
+
+.error i[class = "fas fa-exclamation-circle"]{
+  display: block;
+  color: #F20789;
+  background-color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+.error small, form small{
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-left: 8px;
+  margin-top: 5px;
+  font-style: italic;
+  display: block;
+  color: #F20789;
+  font-size: .9rem;
 }

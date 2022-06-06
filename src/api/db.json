@@ -358,11 +358,18 @@
       }
     },
     {
+<<<<<<< HEAD
+      "title": "Producto prueba",
+      "price": "2000",
+      "stock": "20",
+      "description": "descripcion",
+=======
       "title": "pepe",
       "price": "45",
       "stock": "55",
       "description": "dfgd",
       "image": "https://www.fillmurray.com/g/300/300",
+>>>>>>> main
       "id": 30
     }
   ]

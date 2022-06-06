@@ -8,7 +8,7 @@ const NewProduct = () => {
     <>
       <Header title="Agregar Producto" />
       <div className="newProduct">
-        <FormProducts type="create" />
+        <FormProducts type="create" action={"/"} product = {{}} />
       </div>
     </>
   )
