@@ -1,6 +1,6 @@
-import React from 'react'
-import oliviaLogo from '../assets/olivia.png'
-import './ButtonOfelia.css'
+import React from 'react';
+import oliviaLogo from '../assets/olivia.png';
+import './ButtonOfelia.css';
 
 const ButtonOfelia = () => {
   return (
@@ -13,4 +13,4 @@ const ButtonOfelia = () => {
   )
 }
 
-export default ButtonOfelia
+export default ButtonOfelia;

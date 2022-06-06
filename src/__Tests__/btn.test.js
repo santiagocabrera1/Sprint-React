@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import Btn from '../components/Btn'
-import { MemoryRouter } from 'react-router-dom'
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Btn from '../components/Btn';
+import { MemoryRouter } from 'react-router-dom';
 
 // describe es para describir un conjunto de tests
 describe('Btn: Componente que renderiza un boton o link con forma de Pill', () => {

@@ -22,10 +22,22 @@ describe(' SideBar' , () => {
         render( <SideBar/>, { wrapper: MemoryRouter } )
         //Nos aseguramos de que el link de productos exista y lo pasamos a una variable
         const  button=screen.getByRole('link',{name:/tienda/i})
-        //Y en la priemra asercion buscamos que button nos lleve a /products
+        //Y en la primera asercion buscamos que button nos lleve a /products
         expect(button).toHaveAttribute('href','/store')
         //Y en la segunda asercion buscamos que button matchee con productos (que es el nombre del boton)
-        expect(button.innerHTML).toMatch('Productos')
+        expect(button.innerHTML).toMatch('Tienda')
+    })
+
+    test('botonInicio', () =>{
+        //Renderizamos el componente que queremos testear
+        //Usamos el MmemoryRouter porque dentro de sidebar se encuentran los links de navbar
+        render( <SideBar/>, { wrapper: MemoryRouter } )
+        //Nos aseguramos de que el link de productos exista y lo pasamos a una variable
+        const  button=screen.getByRole('link',{name:/inicio/i})
+        //Y en la primera asercion buscamos que button nos lleve a /products
+        expect(button).toHaveAttribute('href','/')
+        //Y en la segunda asercion buscamos que button matchee con productos (que es el nombre del boton)
+        expect(button.innerHTML).toMatch('Inicio')
     })
 
 })

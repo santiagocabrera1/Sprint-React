@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import { MemoryRouter } from 'react-router-dom'
-import ArticleProducts from '../components/ArticleProducts'
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { MemoryRouter } from 'react-router-dom';
+import ArticleProducts from '../components/ArticleProducts';
 
 describe('Tarjeta de producto con link a detalle', () => {
   test('contiene un link a la pagina de detalle', () => {
