@@ -3,8 +3,8 @@ import './Loader.css';
 
 function Loader() {
   return (
-    <div className="preloaderContainer">
-      <div className="preloader"></div>
+    <div data-testid="custom-element" className="preloaderContainer">
+      <div data-testid="custom-element2" className="preloader"></div>
     </div>
   )
 }
